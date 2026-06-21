@@ -55,12 +55,9 @@
       "problemMatcher": []
     },
     {
-      "label": "Smoke Test DaoGame",
+      "label": "Smoke Test Dependencies",
       "type": "shell",
-      "command": "${workspaceFolder}\\build\\mingw-debug\\DaoGame.exe",
-      "args": [
-        "--smoke-test"
-      ],
+      "command": "${workspaceFolder}\\build\\mingw-debug\\DaoGameDependencySmoke.exe",
       "options": {
         "cwd": "${workspaceFolder}"
       },

@@ -45,11 +45,13 @@ cmake --build --preset mingw-debug
 .\build\mingw-debug\DaoGame.exe
 ```
 
-For automated verification:
+For dependency verification:
 
 ```powershell
-.\build\mingw-debug\DaoGame.exe --smoke-test
+.\build\mingw-debug\DaoGameDependencySmoke.exe
 ```
+
+The production entry point is `src/main.cpp`. Third-party dependency checks live in `tests/dependency_smoke.cpp`.
 
 ## CLion
 
@@ -67,4 +69,4 @@ Open the project directory in VSCode, then:
 - Press `Ctrl+Shift+B` to build the debug executable.
 - Press `F5` and select `Debug DaoGame` to configure, build, and launch under GDB.
 - Run the `Run DaoGame` task to configure, build, and start without the debugger.
-- Run the `Smoke Test DaoGame` task for a quick automated launch check.
+- Run the `Smoke Test Dependencies` task for a quick third-party dependency check.

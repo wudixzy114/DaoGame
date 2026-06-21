@@ -19,13 +19,19 @@ add_executable(DaoGame
 
 target_compile_features(DaoGame PRIVATE cxx_std_20)
 
-target_include_directories(DaoGame
+add_executable(DaoGameDependencySmoke
+    tests/dependency_smoke.cpp
+)
+
+target_compile_features(DaoGameDependencySmoke PRIVATE cxx_std_20)
+
+target_include_directories(DaoGameDependencySmoke
     PRIVATE
         ${Stb_INCLUDE_DIR}
         ${MINIAUDIO_INCLUDE_DIRS}
 )
 
-target_link_libraries(DaoGame
+target_link_libraries(DaoGameDependencySmoke
     PRIVATE
         SDL3::SDL3
         Freetype::Freetype
@@ -33,8 +39,15 @@ target_link_libraries(DaoGame
         nlohmann_json::nlohmann_json
 )
 
-if(MSVC)
-    target_compile_options(DaoGame PRIVATE /W4 /permissive-)
-else()
-    target_compile_options(DaoGame PRIVATE -Wall -Wextra -Wpedantic)
-endif()
+set(DAOGAME_TARGETS
+    DaoGame
+    DaoGameDependencySmoke
+)
+
+foreach(target_name IN LISTS DAOGAME_TARGETS)
+    if(MSVC)
+        target_compile_options(${target_name} PRIVATE /W4 /permissive-)
+    else()
+        target_compile_options(${target_name} PRIVATE -Wall -Wextra -Wpedantic)
+    endif()
+endforeach()

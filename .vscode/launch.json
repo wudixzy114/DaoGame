@@ -23,13 +23,11 @@
       ]
     },
     {
-      "name": "Run Smoke Test",
+      "name": "Debug Dependency Smoke",
       "type": "cppdbg",
       "request": "launch",
-      "program": "${workspaceFolder}/build/mingw-debug/DaoGame.exe",
-      "args": [
-        "--smoke-test"
-      ],
+      "program": "${workspaceFolder}/build/mingw-debug/DaoGameDependencySmoke.exe",
+      "args": [],
       "stopAtEntry": false,
       "cwd": "${workspaceFolder}",
       "environment": [],
