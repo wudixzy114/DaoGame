@@ -1,0 +1,20 @@
+{
+  "name": "daogame",
+  "version-string": "0.1.0",
+  "dependencies": [
+    "sdl3",
+    "freetype",
+    "harfbuzz",
+    "nlohmann-json",
+    "stb",
+    "miniaudio",
+    {
+      "name": "imgui",
+      "features": [
+        "sdl3-binding",
+        "sdl3-renderer-binding",
+        "freetype"
+      ]
+    }
+  ]
+}

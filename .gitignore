@@ -1,0 +1,8 @@
+.idea/
+build/
+cmake-build-*/
+.vcpkg/
+vcpkg_installed/
+out/
+*.user
+*.log
