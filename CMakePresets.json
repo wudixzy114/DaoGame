@@ -15,7 +15,10 @@
         "CMAKE_BUILD_TYPE": "Debug",
         "CMAKE_C_COMPILER": "C:/msys64/ucrt64/bin/gcc.exe",
         "CMAKE_CXX_COMPILER": "C:/msys64/ucrt64/bin/g++.exe",
+        "CMAKE_MAKE_PROGRAM": "C:/msys64/ucrt64/bin/ninja.exe",
+        "CMAKE_EXPORT_COMPILE_COMMANDS": "ON",
         "CMAKE_TOOLCHAIN_FILE": "${sourceDir}/.vcpkg/scripts/buildsystems/vcpkg.cmake",
+        "VCPKG_INSTALLED_DIR": "${sourceDir}/vcpkg_installed",
         "VCPKG_TARGET_TRIPLET": "x64-mingw-dynamic"
       }
     },
@@ -28,19 +31,12 @@
         "CMAKE_BUILD_TYPE": "Release",
         "CMAKE_C_COMPILER": "C:/msys64/ucrt64/bin/gcc.exe",
         "CMAKE_CXX_COMPILER": "C:/msys64/ucrt64/bin/g++.exe",
+        "CMAKE_MAKE_PROGRAM": "C:/msys64/ucrt64/bin/ninja.exe",
+        "CMAKE_EXPORT_COMPILE_COMMANDS": "ON",
         "CMAKE_TOOLCHAIN_FILE": "${sourceDir}/.vcpkg/scripts/buildsystems/vcpkg.cmake",
+        "VCPKG_INSTALLED_DIR": "${sourceDir}/vcpkg_installed",
         "VCPKG_TARGET_TRIPLET": "x64-mingw-dynamic"
       }
-    }
-  ],
-  "buildPresets": [
-    {
-      "name": "mingw-debug",
-      "configurePreset": "mingw-debug"
-    },
-    {
-      "name": "mingw-release",
-      "configurePreset": "mingw-release"
     }
   ]
 }

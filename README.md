@@ -36,7 +36,7 @@ cmake --preset mingw-debug
 ## Build
 
 ```powershell
-cmake --build --preset mingw-debug
+cmake --build build\mingw-debug
 ```
 
 ## Run
