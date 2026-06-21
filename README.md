@@ -54,3 +54,17 @@ For automated verification:
 ## CLion
 
 Open the project directory and select the `mingw-debug` CMake preset. The preset already points to the local vcpkg toolchain and MSYS2 UCRT64 compilers.
+
+## VSCode
+
+Recommended extensions:
+
+- C/C++
+- CMake Tools
+
+Open the project directory in VSCode, then:
+
+- Press `Ctrl+Shift+B` to build the debug executable.
+- Press `F5` and select `Debug DaoGame` to configure, build, and launch under GDB.
+- Run the `Run DaoGame` task to configure, build, and start without the debugger.
+- Run the `Smoke Test DaoGame` task for a quick automated launch check.

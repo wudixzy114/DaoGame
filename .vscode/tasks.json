@@ -1,0 +1,74 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Configure DaoGame (Debug)",
+      "type": "shell",
+      "command": "cmake",
+      "args": [
+        "--preset",
+        "mingw-debug"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Build DaoGame (Debug)",
+      "type": "shell",
+      "command": "cmake",
+      "args": [
+        "--build",
+        "--preset",
+        "mingw-debug"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": "$gcc"
+    },
+    {
+      "label": "Configure and Build DaoGame (Debug)",
+      "dependsOrder": "sequence",
+      "dependsOn": [
+        "Configure DaoGame (Debug)",
+        "Build DaoGame (Debug)"
+      ],
+      "problemMatcher": []
+    },
+    {
+      "label": "Run DaoGame",
+      "type": "shell",
+      "command": "${workspaceFolder}\\build\\mingw-debug\\DaoGame.exe",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "dependsOrder": "sequence",
+      "dependsOn": [
+        "Configure and Build DaoGame (Debug)"
+      ],
+      "problemMatcher": []
+    },
+    {
+      "label": "Smoke Test DaoGame",
+      "type": "shell",
+      "command": "${workspaceFolder}\\build\\mingw-debug\\DaoGame.exe",
+      "args": [
+        "--smoke-test"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "dependsOrder": "sequence",
+      "dependsOn": [
+        "Configure and Build DaoGame (Debug)"
+      ],
+      "problemMatcher": []
+    }
+  ]
+}
